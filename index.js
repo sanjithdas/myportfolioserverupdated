@@ -2,8 +2,12 @@
 const express = require('express');
 require('dotenv').config();
 
+const cors = require('cors');
+
 // Init express
 const app = express();
+
+app.use(cors());
 
 // Import central routes
 const routes = require('./routes/routes');
